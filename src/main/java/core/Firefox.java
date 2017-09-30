@@ -19,7 +19,7 @@ public class Firefox {
 
         String url = "http://facebook.com/";
         String email_address = "avalonkl@gmail.com";
-        String password = "0397DR44900";
+        String password = "********";
 
         if (System.getProperty("os.name").toUpperCase().contains("MAC"))     driverPath = "./resources/webdrivers/mac/geckodriver.sh";
         else if (System.getProperty("os.name").toUpperCase().contains("WINDOWS")) driverPath = "./resources/webdrivers/pc/geckodriver.exe";

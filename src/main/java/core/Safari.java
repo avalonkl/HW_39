@@ -18,7 +18,7 @@ public class Safari {
 
         String url = "http://facebook.com/";
         String email_address = "avalonkl@gmail.com";
-        String password = "0397DR44900";
+        String password = "********";
 
         if (!System.getProperty("os.name").contains("Mac")) {throw new IllegalArgumentException("Safari is available only on Mac");}
 
@@ -43,10 +43,11 @@ public class Safari {
         driver.findElement(By.id("u_0_5")).click();
 
         //Thread.sleep(3000);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"u_0_a\"]/div[1]/div[1]/div/a/span"))).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[1]/div/div/div/div[2]/div[1]/div[1]/div/a/span"))).click();
 
         //Thread.sleep(5000);
-        String friends = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"u_0_13\"]/li[3]/a/span[1]"))).getText();
+        WebElement amount = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[2]/ul/li[3]/a")));
+        String friends = (String) ((JavascriptExecutor) driver).executeScript("arguments[0].getText();", amount);
         System.out.println("You have " + friends + " friends");
 
         //Thread.sleep(5000);

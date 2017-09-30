@@ -18,7 +18,7 @@ public class Chrome {
 
         String url = "http://facebook.com/";
         String email_address = "avalonkl@gmail.com";
-        String password = "0397DR44900";
+        String password = "**********";
 
         if (System.getProperty("os.name").toUpperCase().contains("MAC"))
             driverPath = "./resources/webdrivers/mac/chromedriver";
@@ -48,7 +48,7 @@ public class Chrome {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys(email_address);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pass"))).sendKeys(password);
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("u_0_5"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("u_0_6"))).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[1]/div/div/div/div[2]/div[1]/div[1]/div/a/span"))).click();
 
